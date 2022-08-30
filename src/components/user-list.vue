@@ -54,51 +54,52 @@ import {ref} from 'vue';
     & > h2 {
       padding: 1rem 0;
       color: red;
+      font-style: italic;
     }
   }
 
   .user-header {
-      margin: 1rem 0;
-      padding: 1rem;
-      background: rgba(0, 0, 0, .66);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    margin: 1rem 0;
+    padding: 2rem;
+    background: rgba(0, 0, 0, .66);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     & input {
-        width: 15rem;
-        padding: .5rem;
-        font-size: 1rem;
+      width: 15rem;
+      padding: .5rem;
+      font-size: 1rem;
     }
   }
 
   ul {
-      list-style: none;
-      border: 2px solid whitesmoke;
-      background: rgba(0, 0, 0, .66);
+    list-style: none;
+    border: 2px solid whitesmoke;
+    background: rgba(0, 0, 0, .66);
 
-      & li {
-        display: flex;
-        justify-content: space-between;
-        gap: 2rem;
-        padding: 1rem;
+    & li {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 1rem;
 
-        &:nth-child(even) {
-          background-color: rgba(0, 0, 0, 0.33);
-        }
-
-        &:not(:last-child) {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-        }
-
-        &:hover {
-          cursor: pointer;
-          font-weight: bold;
-        }
-
-        & span {
-          flex: 1;
-        }
+      &:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.33);
       }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      }
+
+      &:hover {
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      & span {
+        flex: 1;
+      }
+    }
   }
 </style>
