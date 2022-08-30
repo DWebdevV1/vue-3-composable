@@ -45,13 +45,16 @@ import {ref} from 'vue';
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   .user-list, .user-result {
     margin: 1rem 0;
   }
 
-  div > h2 {
-    padding: .5rem;
+  div {
+    & > h2 {
+      padding: 1rem 0;
+      color: red;
+    }
   }
 
   .user-header {
@@ -61,41 +64,41 @@ import {ref} from 'vue';
       display: flex;
       align-items: center;
       justify-content: space-between;
-  }
 
-  .user-header input {
-      width: 15rem;
-      padding: .5rem;
-      font-size: 1rem;
+    & input {
+        width: 15rem;
+        padding: .5rem;
+        font-size: 1rem;
+    }
   }
 
   ul {
       list-style: none;
       border: 2px solid whitesmoke;
       background: rgba(0, 0, 0, .66);
-  }
 
-  ul li {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: 1rem;
-  }
+      & li {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 1rem;
 
-  ul li span {
-      flex: 1;
-  }
+        &:nth-child(even) {
+          background-color: rgba(0, 0, 0, 0.33);
+        }
 
-  ul li:nth-child(even) {
-      background-color: rgba(0, 0, 0, 0.33);
-  }
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        }
 
-  ul li:hover {
-      cursor: pointer;
-      font-weight: bold;
-  }
+        &:hover {
+          cursor: pointer;
+          font-weight: bold;
+        }
 
-  ul li:not(:last-child) {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        & span {
+          flex: 1;
+        }
+      }
   }
 </style>
